@@ -149,6 +149,7 @@ static const pcap_hdr_t pcap_hdr = {
     
     write(self.fd, &sf_hdr, sizeof(sf_hdr));
     write(self.fd, body, length);
+    xfree(body);
     
     return YES;
 
@@ -166,6 +167,8 @@ static const pcap_hdr_t pcap_hdr = {
     
     (void)fwrite(&sf_hdr, sizeof(sf_hdr), 1,self.fp);
     (void)fwrite(body, length, 1, self.fp);
+    xfree(body);
+    
     fflush(self.fp);
     
     return YES;

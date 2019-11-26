@@ -14,4 +14,7 @@ void verbose(const char *format, ...);
 
 void usage(void);
 
+void xfree(void *p);
+
+
 #endif /* util_h */

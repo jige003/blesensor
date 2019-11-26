@@ -8,6 +8,7 @@
 
 #include "util.h"
 #include <stdarg.h>
+#include <stdlib.h>
 
 void verbose(const char *format, ...) {
     va_list args;
@@ -26,4 +27,10 @@ void usage(void) {
     verbose("\t -v show verbose\n");
     verbose("\t -h help\n");
     exit(1);
+}
+
+void xfree(void *p){
+    if (p != NULL) {
+        free(p);
+    }
 }
