@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554A251E2387F10500128E53 /* libpcap.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 554A251D2387F0F200128E53 /* libpcap.tbd */; };
+		554A2592238BE44000128E53 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554A2591238BE43F00128E53 /* IOKit.framework */; };
+		554A2596238CF48E00128E53 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 554A2595238CF48E00128E53 /* util.c */; };
 		55C0DBB5238531B300C41292 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C0DBB4238531B300C41292 /* main.m */; };
+		55C0DBBD238531D400C41292 /* usb.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C0DBBC238531D400C41292 /* usb.m */; };
+		55E395CE2387E31800E2751A /* pcap.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E395CD2387E31800E2751A /* pcap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		554A251D2387F0F200128E53 /* libpcap.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpcap.tbd; path = usr/lib/libpcap.tbd; sourceTree = SDKROOT; };
+		554A2591238BE43F00128E53 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		554A2594238CF48E00128E53 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		554A2595238CF48E00128E53 /* util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
 		55C0DBB1238531B300C41292 /* blesensor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = blesensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0DBB4238531B300C41292 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55C0DBBB238531D400C41292 /* usb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = usb.h; sourceTree = "<group>"; };
+		55C0DBBC238531D400C41292 /* usb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = usb.m; sourceTree = "<group>"; };
+		55E395CC2387E31800E2751A /* pcap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pcap.h; sourceTree = "<group>"; };
+		55E395CD2387E31800E2751A /* pcap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pcap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554A251E2387F10500128E53 /* libpcap.tbd in Frameworks */,
+				554A2592238BE44000128E53 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		554A251C2387F0F200128E53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				554A2591238BE43F00128E53 /* IOKit.framework */,
+				554A251D2387F0F200128E53 /* libpcap.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		55C0DBA8238531B300C41292 = {
 			isa = PBXGroup;
 			children = (
 				55C0DBB3238531B300C41292 /* blesensor */,
 				55C0DBB2238531B300C41292 /* Products */,
+				554A251C2387F0F200128E53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				55C0DBB4238531B300C41292 /* main.m */,
+				554A2594238CF48E00128E53 /* util.h */,
+				554A2595238CF48E00128E53 /* util.c */,
+				55E395CC2387E31800E2751A /* pcap.h */,
+				55E395CD2387E31800E2751A /* pcap.m */,
+				55C0DBBB238531D400C41292 /* usb.h */,
+				55C0DBBC238531D400C41292 /* usb.m */,
 			);
 			path = blesensor;
 			sourceTree = "<group>";
@@ -119,6 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C0DBBD238531D400C41292 /* usb.m in Sources */,
+				554A2596238CF48E00128E53 /* util.c in Sources */,
+				55E395CE2387E31800E2751A /* pcap.m in Sources */,
 				55C0DBB5238531B300C41292 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
