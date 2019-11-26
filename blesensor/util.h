@@ -2,7 +2,7 @@
 //  util.h
 //  blesensor
 //
-//  Created by 张勤 on 2019/11/26.
+//  Created by jige003 on 2019/11/26.
 //  Copyright © 2019 jige. All rights reserved.
 //
 
@@ -10,5 +10,8 @@
 #define util_h
 
 #include <stdio.h>
+void verbose(const char *format, ...);
+
+void usage(void);
 
 #endif /* util_h */
